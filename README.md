@@ -10,6 +10,8 @@ ShopSphere is an e-commerce frontend interface designed to provide users with a 
 - Search functionality for products
 - Cart management with add and remove functionality
 - Responsive design for various screen sizes
+- Fetching products from dummyJson (https://dummyjson.com/docs/products)
+- Fetching User/Auth from dummyJson (https://dummyjson.com/docs/auth)
 
 ## Technologies
 - React.js for the frontend interface
