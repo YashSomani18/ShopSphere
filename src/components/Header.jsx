@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import Logo from "../assets/Logo.png";
 import Cart from "../assets/Cart.png";
 
-const Header = ({ cartItems, setSortOrder }) => {
+const Header = ({ cartItems, setSortOrder, onLogoutSuccess }) => {
   const navigate = useNavigate();
   const [searchTerm, setSearchTerm] = useState("");
   
@@ -12,6 +12,7 @@ const Header = ({ cartItems, setSortOrder }) => {
 
   const handleLogout = () => {
     localStorage.removeItem("token");
+    onLogoutSuccess();
     navigate("/login");
   };
 
