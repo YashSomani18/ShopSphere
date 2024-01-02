@@ -14,7 +14,7 @@ const validationSchema = Yup.object({
   password: Yup.string().required("Required"),
 });
 
-const Login = () => {
+const Login = ({ onLoginSuccess }) => {
   const navigate = useNavigate();
 
   const onSubmit = async (values, { setSubmitting }) => {
@@ -26,6 +26,9 @@ const Login = () => {
       });
       // console.log("Login 23 ->         ",response);
       localStorage.setItem("token", response.data.token);
+
+      onLoginSuccess();
+
       navigate("/home");
     } catch (error) {
       console.error(error);
